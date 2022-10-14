@@ -13,13 +13,19 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/Datosp', (req, res) => {
-    res.send('Datos Personales')
-  })
+app.get('/datos', (req, res) => {
+  res.render('datos',{
+  titulo:"seccion educación",
+  descripcion:"aqui encontraras mi informacion academica"
+})
+})
 
 app.get('/perfil', (req, res) => {
-    res.send('perfil')
-})  
+  res.render('perfil',{
+  titulo:"seccion educación",
+  descripcion:"aqui encontraras mi informacion academica"
+})
+})
 
 app.get('/educacion', (req, res) => {
     res.render('educacion',{
@@ -28,12 +34,12 @@ app.get('/educacion', (req, res) => {
   })
   })
 
-  app.get('/experienciaL', (req, res) => {
-    res.send('Página de experiencia laboral')
+  app.get('/experiencial', (req, res) => {
+    res.render('experiencial')
   })
 
   app.get('/referencias', (req, res) => {
-    res.send('referencias')
+    res.render('referencias')
   })
 
   app.use((req,res,next) =>{
